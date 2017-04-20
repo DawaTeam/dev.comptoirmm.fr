@@ -1,0 +1,191 @@
+// Meadia Queries Breakpoints
+@mixin breakpoint($point) {
+  @if $point == lg {
+    @media (min-width: $screen-lg-min) { @content; }
+  }
+  @else if $point == md {
+    @media (min-width: $screen-md-min) { @content; }
+  }
+  @else if $point == sm {
+    @media (min-width: $screen-sm-min)  { @content; }
+  }
+  @else if $point == max-xs {
+    @media (max-width: $screen-xs-max)  { @content; }
+  }
+  @else if $point == max-sm {
+    @media (max-width: $screen-sm-max)  { @content; }
+  }
+  @else if $point == max-md {
+    @media (max-width: $screen-md-max)  { @content; }
+  }
+}
+
+@mixin boxshadow($offsetX, $offsetY, $spread, $colorR, $colorG, $colorB, $opacity, $two: false, $offsetX2:0, $offsetY2:0, $spread2:0, $colorR2:0, $colorG2:0, $colorB2:0, $opacity2:0 ) {
+    @if $two {
+      -webkit-box-shadow: $offsetX $offsetY $spread rgba($colorR, $colorG, $colorB, $opacity), $offsetX2 $offsetY2 $spread2 rgba($colorR2, $colorG2, $colorB2, $opacity2);
+      -moz-box-shadow: $offsetX $offsetY $spread rgba($colorR, $colorG, $colorB, $opacity), $offsetX2 $offsetY2 $spread2 rgba($colorR2, $colorG2, $colorB2, $opacity2);
+      -o-box-shadow: $offsetX $offsetY $spread rgba($colorR, $colorG, $colorB, $opacity), $offsetX2 $offsetY2 $spread2 rgba($colorR2, $colorG2, $colorB2, $opacity2);
+      box-shadow: $offsetX $offsetY $spread rgba($colorR, $colorB, $colorB, $opacity), $offsetX2 $offsetY2 $spread2 rgba($colorR2, $colorG2, $colorB2, $opacity2);
+    } @else {
+      -webkit-box-shadow: $offsetX $offsetY $spread rgba($colorR, $colorG, $colorB, $opacity);
+      -moz-box-shadow: $offsetX $offsetY $spread rgba($colorR, $colorG, $colorB, $opacity);
+      -o-box-shadow: $offsetX $offsetY $spread rgba($colorR, $colorG, $colorB, $opacity);
+      box-shadow: $offsetX $offsetY $spread rgba($colorR, $colorB, $colorB, $opacity);
+    }
+}
+
+@mixin textshadow($offsetX, $offsetY, $spread, $colorR, $colorG, $colorB, $opacity) {
+  -webkit-text-shadow: $offsetX $offsetY $spread rgba($colorR, $colorG, $colorB, $opacity);
+  -moz-text-shadow: $offsetX $offsetY $spread rgba($colorR, $colorG, $colorB, $opacity);
+  -o-text-shadow: $offsetX $offsetY $spread rgba($colorR, $colorG, $colorB, $opacity);
+  text-shadow: $offsetX $offsetY $spread rgba($colorR, $colorB, $colorB, $opacity);
+}
+
+@mixin bdradius($radius) {
+  -webkit-border-radius: $radius ;
+  -moz-border-radius: $radius ;
+  -o-border-radius: $radius ;
+  border-radius: $radius ;
+}
+
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin transition ($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin transform ($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  transform: $transforms;
+}
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+
+
+@mixin animations ($animation-name, $duration, $delay, $ease, $iteration: null) {
+    -webkit-animation-name: $animation-name;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-delay: $delay;
+    -webkit-animation-timing-function: $ease;
+    -webkit-animation-iteration-count: #{$iteration}; 
+    -webkit-animation-fill-mode: forwards; 
+
+    -moz-animation-name: $animation-name;
+    -moz-animation-duration: $duration;
+    -moz-animation-delay: $delay;
+    -moz-animation-timing-function: $ease;
+    -moz-animation-iteration-count: #{$iteration}; 
+    -moz-animation-fill-mode: forwards; 
+
+    -o-animation-name: $animation-name;
+    -o-animation-duration: $duration;
+    -o-animation-delay: $delay;
+    -o-animation-timing-function: $ease;
+    -o-animation-iteration-count: #{$iteration}; 
+    -o-animation-fill-mode: forwards; 
+
+    animation-name: $animation-name;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-timing-function: $ease;
+    animation-iteration-count: #{$iteration}; 
+    animation-fill-mode: forwards; 
+  }
+
+
+
+@mixin force-wrap {
+  white-space: pre;           // CSS 2.0
+  white-space: pre-wrap;      // CSS 2.1
+  white-space: pre-line;      // CSS 3.0
+  white-space: -pre-wrap;     // Opera 4-6
+  white-space: -o-pre-wrap;   // Opera 7
+  white-space: -moz-pre-wrap; // Mozilla
+  word-wrap: break-word;      // IE 5+
+}
+
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include translate(-50%,-50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    @include translate(-50%,0);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    @include translate(0,-50%);
+  }
+}
+
+@mixin placeholder($color: $input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // See https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
+
+@mixin font-face($font-name, $file, $family, $category:"") {
+    $filepath: "../fonts/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$font-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $font-name + "") format('svg'), url($filepath + ".woff2") format('woff2');
+    }
+    %#{$font-name} {
+        font: {
+            @if $category != "" {
+                family: "#{$font-name}", #{$category};
+            }
+            @else {
+                family: "#{$font-name}";
+                weight: normal;
+            }
+        }
+    }
+}
