@@ -785,7 +785,22 @@ header {
                         margin-right: 20px;
                         diplay:table-cell;
                     }
-                    span {display: table-cell;}
+                    span {
+                        display: table-cell;
+                        span {
+                            display:inline;
+                            &:first-child {
+                                @include breakpoint(md){
+                                    display: block;
+                                }
+                            }
+                            &:nth-child(2) {
+                                @include breakpoint(md){
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
                 }
                 .contact {
                     display: table;
