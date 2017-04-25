@@ -300,11 +300,7 @@ article {
 
 
 /* ## _HEADER ## */
-<<<<<<< HEAD
 header {
-=======
-header { 
->>>>>>> b380282c2fec560e930dfce71da7a98ee791747d
     .header-top {
         margin: 60px 0 80px;
         h1 {margin: 0;}
@@ -372,58 +368,8 @@ header {
     .navigation {
         @include breakpoint(md) {
             margin-bottom: 60px;
-            text-align: center;
         }
-<<<<<<< HEAD
 
-=======
-         ul {
-            list-style:none;
-            li {
-                display: block;
-                font-family: "CamptonExtraBold";
-                font-size: 1.3rem;
-                text-transform: uppercase;
-                @include breakpoint(md) {
-                    display: inline-block;
-                    margin: 0 5px;
-                    font-size: 1.2rem;
-                    &:first-child {
-                        margin-left: 0;
-                    }
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
-                @include breakpoint(lg) {
-                    margin: 0 14px;
-                    font-size: 1.3rem;
-                }
-                a {
-                    display: block;
-                    color:#FFF;
-                    @include breakpoint(md) {
-                        color:$black;
-                    }
-                    
-                    &:hover, &.current-menu-item {
-                        color:$blue;
-                        text-decoration: none;
-                    }
-                    
-                }
-                &#menu-item-53 {
-                    a {
-                        color:$yellow;
-                        &:hover, &.current-menu-item {
-                            color:$blue;
-                        }
-                    }
-                }
-
-            }
-         }
->>>>>>> b380282c2fec560e930dfce71da7a98ee791747d
     }
 }
 /* ## _/HEADER ## */
@@ -461,22 +407,6 @@ header {
                 left:0;
                 bottom:-25px;
                 background:$yellow;
-            }
-            ul {
-                list-style:none;
-                li {
-                    display: inline-block;
-                    &:after {
-                        content:",";
-                        margin-left: 2px;
-                    }
-                    &:last-child{
-                        &:after {
-                            content:none;
-                            
-                        }
-                    }
-                }
             }
         }
         .title {
@@ -973,7 +903,6 @@ header {
 /* ## _/HOME ## */
 
 /* ## _DOSSIERS ## */
-
 /* ## _/DOSSIERS ## */
 
 /* ## _NEWSLETTER ## */

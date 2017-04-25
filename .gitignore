@@ -5,6 +5,8 @@ node_modules/*
 
 prod/*
 
+www/*
+
 package.json
 
 node_modules/.bin/coffee
