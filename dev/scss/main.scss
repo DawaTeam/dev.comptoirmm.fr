@@ -300,11 +300,7 @@ article {
 
 
 /* ## _HEADER ## */
-<<<<<<< HEAD
-header {
-=======
 header { 
->>>>>>> b380282c2fec560e930dfce71da7a98ee791747d
     .header-top {
         margin: 60px 0 80px;
         h1 {margin: 0;}
@@ -374,9 +370,6 @@ header {
             margin-bottom: 60px;
             text-align: center;
         }
-<<<<<<< HEAD
-
-=======
          ul {
             list-style:none;
             li {
@@ -423,7 +416,6 @@ header {
 
             }
          }
->>>>>>> b380282c2fec560e930dfce71da7a98ee791747d
     }
 }
 /* ## _/HEADER ## */
@@ -568,6 +560,7 @@ header {
             }
             article {
                 .date {
+                    margin-top: 20px;
                     font-family: "CamptonSemiBold";
                     font-size: 1.1rem;
                     text-transform: uppercase;
