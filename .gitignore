@@ -3,8 +3,6 @@ Gruntfile.js
 
 node_modules/*
 
-prod/*
-
 www/*
 
 package.json
