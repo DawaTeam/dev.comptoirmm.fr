@@ -116,3 +116,16 @@ var SlideAgenda = {
 		}		 
 	}
 }
+
+
+/* ####   STUDIES - TOGGLE FILTERS  ### */
+var ToggleFilters = {
+	init : function() {
+		toggleButton = $(".studies-single .filters .toggle-button");
+		filters = $(".studies-single .filters");
+		toggleButton.on("click", function() {
+			filters.toggleClass('open');
+
+		});
+	}
+}

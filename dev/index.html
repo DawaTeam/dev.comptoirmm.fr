@@ -24,8 +24,8 @@
   include "header.html"
   <!-- /header -->
 
-  <!-- Hero -->
-  <section class="hero">
+<!-- Hero -->
+<section class="hero home">
     <div class="swiper-container swiper-hero">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -34,8 +34,8 @@
               <div class="category">dossier du mois</div>
               <div class="title">
                 <a href="" title="">
-                                        Déménagement : Ad voluit plerum que crebris sollem
-                                    </a>
+                     Déménagement : Ad voluit plerum que crebris sollem
+                </a>
               </div>
               <div class="desc hidden-sm hidden-xs">
                 <a href="" title="">Palatinis Italiam quem in in et iam hortaretur tumultuosum palatinis ut esse paulatim conpererat se se otium palatinis iussit esse eum et conspiraret communi scholis blandius quem iussit ad cum sollicitari ex Scutariis ad domitiano est blandius referente sollicitari.
@@ -145,10 +145,16 @@
                   <div class="row">
                     <div class="col-xs-12">
                       <article class="bd-orange">
-                        <img src="images/medias/img-article-thumb_1.jpg" alt="">
-                        <div class="date">janvier 2017</div>
-                        <h3><a href="" title="">Comment les millennials influencent l’entreprise de demain ?</a></h3>
-                        <div class="excerpt hidden-xs">La seconde édition du congrès Entreprise du Futur, organisée en janvier dernier, n’a pas manqué de s’interroger sur l’arrivée des millennials dans les entreprises.</div>
+                        <a href="" class="pic">
+                          <img src="images/medias/img-article-thumb_1.jpg" alt="">
+                        </a>
+                        <div class="infos">
+                          <div class="head">
+                            <div class="date">janvier 2017</div>
+                          </div>
+                          <h3><a href="" title="">Comment les millennials influencent l’entreprise de demain ?</a></h3>
+                          <div class="excerpt hidden-xs">La seconde édition du congrès Entreprise du Futur, organisée en janvier dernier, n’a pas manqué de s’interroger sur l’arrivée des millennials dans les entreprises.</div>
+                        </div>
                       </article>
                     </div>
                   </div>
@@ -644,7 +650,8 @@
   </section>
   <!-- /Most read -->
 
-  include "newsletter.html" include "footer.html"
+  include "newsletter.html" 
+  include "footer.html"
 
 
   <script src="js/vendor/jquery-3.2.1.min.js"></script>
